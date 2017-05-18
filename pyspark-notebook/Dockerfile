@@ -9,7 +9,7 @@ USER root
 # Spark dependencies
 ENV APACHE_SPARK_VERSION 2.1.0
 ENV HADOOP_VERSION 2.7
-
+ADD spark-streaming-kafka-0-8-assembly_2.11-2.1.1.jar /tmp/spark-streaming-kafka-0-8-assembly_2.11-2.1.1.jar
 # Temporarily add jessie backports to get openjdk 8, but then remove that source
 RUN echo 'deb http://cdn-fastly.deb.debian.org/debian jessie-backports main' > /etc/apt/sources.list.d/jessie-backports.list && \
     apt-get -y update && \
